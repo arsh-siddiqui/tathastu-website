@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tathastu Enterprises – Precision Engineering & Machining Solutions</title>
+  <meta name="description" content="ISO 9001:2015 certified manufacturer of machine parts and tooling for tyre manufacturing industries. CNC, VMC & fabrication experts in Thane, Maharashtra."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --blue: #1E3A8A;
+      --blue-mid: #2563EB;
+      --blue-light: #EFF6FF;
+      --orange: #F97316;
+      --orange-light: #FFF7ED;
+      --gray-50: #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-400: #9CA3AF;
+      --gray-600: #4B5563;
+      --gray-800: #1F2937;
+      --white: #FFFFFF;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md: 0 4px 16px rgba(30,58,138,.10);
+      --shadow-lg: 0 10px 40px rgba(30,58,138,.14);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--gray-800); background: var(--white); overflow-x:hidden; }
+
+    /* ─── PAGE SYSTEM ─── */
+    .page { display:none; animation: fadeUp .4s ease; }
+    .page.active { display:block; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+    /* ─── NAVBAR ─── */
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 5%; height: 70px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display:flex; align-items:center; gap:10px; cursor:pointer; }
+    .nav-logo-icon {
+      width:40px; height:40px; background:var(--blue); border-radius:8px;
+      display:grid; place-items:center;
+    }
+    .nav-logo-icon i { color:#fff; font-size:18px; }
+    .nav-brand { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:var(--blue); line-height:1; }
+    .nav-brand span { color:var(--orange); }
+    .nav-links { display:flex; gap:4px; }
+    .nav-links a {
+      padding:7px 13px; border-radius:6px; font-size:.875rem; font-weight:500;
+      color:var(--gray-600); text-decoration:none; cursor:pointer; transition:.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color:var(--blue); background:var(--blue-light); }
+    .nav-cta {
+      background:var(--orange); color:#fff; padding:8px 18px; border-radius:7px;
+      font-size:.875rem; font-weight:600; cursor:pointer; border:none; transition:.2s; text-decoration:none;
+    }
+    .nav-cta:hover { background:#ea6c0a; }
+    .hamburger {
+      display:none; background:none; border:none; cursor:pointer;
+      padding:8px; touch-action:manipulation; -webkit-tap-highlight-color:transparent;
+      -webkit-appearance:none; appearance:none; outline:none;
+      min-width:44px; min-height:44px; align-items:center; justify-content:center;
+      border-radius:6px; transition:.2s;
+    }
+    .hamburger:hover { background:var(--gray-100); }
+    .hamburger i { font-size:1.4rem; color:var(--gray-800); pointer-events:none; }
+    .mobile-menu {
+      display:none; flex-direction:column; gap:4px;
+      padding:12px 5%; background:#fff; border-bottom:1px solid var(--gray-200);
+      position:fixed; top:70px; left:0; right:0; z-index:998;
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+      max-height: calc(100vh - 70px);
+      overflow-y: auto;
+    }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a {
+      padding:12px 12px; border-radius:7px; font-size:.9rem; font-weight:500;
+      color:var(--gray-600); text-decoration:none; cursor:pointer;
+      touch-action:manipulation; -webkit-tap-highlight-color:transparent;
+      display:block; min-height:44px; display:flex; align-items:center;
+    }
+    .mobile-menu a:hover, .mobile-menu a:active { color:var(--blue); background:var(--blue-light); }
+
+    /* ─── SECTION COMMON ─── */
+    section { padding: 80px 5%; }
+    .section-label {
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--blue-light); color:var(--blue); padding:5px 14px;
+      border-radius:99px; font-size:.78rem; font-weight:600; letter-spacing:.04em;
+      text-transform:uppercase; margin-bottom:14px;
+    }
+    .section-label i { font-size:.75rem; }
+    h2 { font-family:'Syne',sans-serif; font-size:2.2rem; font-weight:700; color:var(--blue); line-height:1.2; margin-bottom:10px; }
+    h2 span { color:var(--orange); }
+    .section-sub { color:var(--gray-600); font-size:1rem; max-width:560px; line-height:1.65; }
+    .section-head { margin-bottom:48px; }
+    .section-head.center { text-align:center; }
+    .section-head.center .section-sub { margin:0 auto; }
+
+    /* ─── GRID HELPERS ─── */
+    .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+    .grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:28px; }
+
+    /* ─── CARD ─── */
+    .card {
+      background:#fff; border:1px solid var(--gray-200); border-radius:var(--radius);
+      padding:28px 24px; box-shadow:var(--shadow-sm); transition:.25s;
+    }
+    .card:hover { box-shadow:var(--shadow-lg); transform:translateY(-3px); border-color:var(--gray-200); }
+
+    /* ─── BADGE ─── */
+    .badge {
+      display:inline-block; padding:3px 10px; border-radius:99px;
+      font-size:.72rem; font-weight:600; letter-spacing:.03em;
+    }
+    .badge-blue { background:var(--blue-light); color:var(--blue); }
+    .badge-orange { background:var(--orange-light); color:var(--orange); }
+
+    /* ─── BTN ─── */
+    .btn {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:11px 22px; border-radius:8px; font-size:.9rem; font-weight:600;
+      cursor:pointer; border:none; text-decoration:none; transition:.2s;
+    }
+    .btn-primary { background:var(--blue); color:#fff; }
+    .btn-primary:hover { background:#1a3278; }
+    .btn-orange { background:var(--orange); color:#fff; }
+    .btn-orange:hover { background:#ea6c0a; }
+    .btn-outline { background:transparent; color:var(--blue); border:2px solid var(--blue); }
+    .btn-outline:hover { background:var(--blue); color:#fff; }
+    .btn-outline-white { background:transparent; color:#fff; border:2px solid rgba(255,255,255,.5); }
+    .btn-outline-white:hover { background:rgba(255,255,255,.1); }
+
+    /* ══════════════════════════════════════
+       HOME PAGE
+    ══════════════════════════════════════ */
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0f1f5c 0%, #1E3A8A 60%, #1d4ed8 100%);
+      min-height: 90vh; display:flex; align-items:center;
+      padding: 60px 5%; position:relative; overflow:hidden;
+    }
+    .hero::before {
+      content:''; position:absolute; inset:0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-inner { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:60px; max-width:1200px; margin:0 auto; position:relative; z-index:1; width:100%; }
+    .hero-tag { display:inline-flex; align-items:center; gap:8px; background:rgba(249,115,22,.15); color:#fba15a; border:1px solid rgba(249,115,22,.3); padding:5px 14px; border-radius:99px; font-size:.78rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; margin-bottom:20px; }
+    .hero h1 { font-family:'Syne',sans-serif; font-size:3.2rem; font-weight:800; color:#fff; line-height:1.15; margin-bottom:16px; }
+    .hero h1 span { color:var(--orange); }
+    .hero-sub { color:rgba(255,255,255,.75); font-size:1.1rem; line-height:1.7; margin-bottom:32px; max-width:480px; }
+    .hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
+    .hero-visual {
+      background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12);
+      border-radius:20px; padding:32px; display:grid; place-items:center;
+      backdrop-filter:blur(10px);
+    }
+    .hero-icon-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; width:100%; }
+    .hero-icon-item { display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 14px; background:rgba(255,255,255,.07); border-radius:12px; border:1px solid rgba(255,255,255,.1); }
+    .hero-icon-item i { font-size:1.8rem; color:var(--orange); }
+    .hero-icon-item p { font-size:.75rem; color:rgba(255,255,255,.8); text-align:center; font-weight:500; }
+
+    /* HIGHLIGHTS */
+    .highlights { background:var(--gray-50); padding:48px 5%; }
+    .highlights-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .hl-card {
+      background:#fff; border:1px solid var(--gray-200); border-radius:var(--radius);
+      padding:28px 24px; display:flex; align-items:flex-start; gap:16px; box-shadow:var(--shadow-sm);
+    }
+    .hl-icon { width:48px; height:48px; border-radius:10px; display:grid; place-items:center; flex-shrink:0; }
+    .hl-icon.blue { background:var(--blue-light); }
+    .hl-icon.orange { background:var(--orange-light); }
+    .hl-icon i { font-size:1.3rem; }
+    .hl-icon.blue i { color:var(--blue); }
+    .hl-icon.orange i { color:var(--orange); }
+    .hl-title { font-weight:700; font-size:1rem; margin-bottom:4px; color:var(--blue); }
+    .hl-desc { font-size:.85rem; color:var(--gray-600); line-height:1.55; }
+
+    /* SERVICES */
+    .services { background:#fff; }
+    .svc-icon { width:52px; height:52px; border-radius:10px; background:var(--blue-light); display:grid; place-items:center; margin-bottom:16px; }
+    .svc-icon i { color:var(--blue); font-size:1.3rem; }
+    .svc-card h3 { font-family:'Syne',sans-serif; font-size:1.05rem; font-weight:700; color:var(--blue); margin-bottom:8px; }
+    .svc-card p { font-size:.85rem; color:var(--gray-600); line-height:1.6; }
+    .svc-card:hover .svc-icon { background:var(--blue); }
+    .svc-card:hover .svc-icon i { color:#fff; }
+
+    /* MACHINERY PREVIEW */
+    .machinery-preview { background:var(--gray-50); }
+    .mach-card { position:relative; overflow:hidden; }
+    .mach-badge { position:absolute; top:16px; right:16px; }
+    .mach-icon { font-size:2.5rem; color:var(--blue); margin-bottom:14px; }
+    .mach-card h3 { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:var(--blue); margin-bottom:8px; }
+    .mach-spec { font-size:.82rem; color:var(--gray-600); line-height:1.7; }
+    .mach-spec li { list-style:none; padding:4px 0; border-bottom:1px solid var(--gray-100); display:flex; align-items:center; gap:7px; }
+    .mach-spec li:last-child { border-bottom:none; }
+    .mach-spec li::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--orange); flex-shrink:0; }
+
+    /* CLIENTS */
+    .clients { background:#fff; }
+    .clients-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:20px; margin-top:40px; }
+    .client-logo {
+      background:var(--gray-50); border:1px solid var(--gray-200); border-radius:var(--radius);
+      padding:24px 16px; display:flex; flex-direction:column; align-items:center; gap:10px;
+      transition:.25s; cursor:default;
+    }
+    .client-logo:hover { border-color:var(--blue); background:var(--blue-light); box-shadow:var(--shadow-md); }
+    .client-logo i { font-size:1.8rem; color:var(--gray-400); transition:.2s; }
+    .client-logo:hover i { color:var(--blue); }
+    .client-logo p { font-size:.8rem; font-weight:600; color:var(--gray-600); text-align:center; transition:.2s; }
+    .client-logo:hover p { color:var(--blue); }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, #1E3A8A 0%, #1d4ed8 100%);
+      padding: 72px 5%; text-align:center; position:relative; overflow:hidden;
+    }
+    .cta-banner::before {
+      content:''; position:absolute; right:-80px; top:-80px;
+      width:300px; height:300px; border-radius:50%; background:rgba(249,115,22,.15);
+    }
+    .cta-banner h2 { color:#fff; font-family:'Syne',sans-serif; font-size:2rem; margin-bottom:14px; }
+    .cta-banner p { color:rgba(255,255,255,.75); margin-bottom:28px; font-size:1rem; }
+
+    /* ══════════════════════════════════════
+       ABOUT PAGE
+    ══════════════════════════════════════ */
+    .about-intro { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .about-intro-right { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .stat-card { background:var(--blue); border-radius:var(--radius); padding:24px; text-align:center; }
+    .stat-card.orange { background:var(--orange); }
+    .stat-num { font-family:'Syne',sans-serif; font-size:2.2rem; font-weight:800; color:#fff; }
+    .stat-label { font-size:.82rem; color:rgba(255,255,255,.8); margin-top:4px; }
+    .mvs { background:var(--gray-50); }
+    .mv-card { padding:32px; }
+    .mv-card h3 { font-family:'Syne',sans-serif; font-size:1.2rem; color:var(--blue); margin-bottom:12px; display:flex; align-items:center; gap:10px; }
+    .mv-card h3 i { color:var(--orange); }
+    .mv-card p { font-size:.9rem; color:var(--gray-600); line-height:1.7; }
+
+    /* ══════════════════════════════════════
+       MACHINERY PAGE
+    ══════════════════════════════════════ */
+    .tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:36px; }
+    .tab-btn {
+      padding:8px 18px; border-radius:7px; font-size:.875rem; font-weight:600;
+      cursor:pointer; border:1.5px solid var(--gray-200); background:#fff; color:var(--gray-600);
+      transition:.2s;
+    }
+    .tab-btn.active { background:var(--blue); color:#fff; border-color:var(--blue); }
+    .tab-btn:hover:not(.active) { border-color:var(--blue); color:var(--blue); }
+    .tab-pane { display:none; animation: fadeUp .3s ease; }
+    .tab-pane.active { display:block; }
+    .spec-table { width:100%; border-collapse:collapse; margin-top:16px; }
+    .spec-table th { background:var(--blue); color:#fff; text-align:left; padding:11px 16px; font-size:.85rem; font-weight:600; }
+    .spec-table td { padding:10px 16px; font-size:.85rem; color:var(--gray-600); border-bottom:1px solid var(--gray-100); }
+    .spec-table tr:last-child td { border-bottom:none; }
+    .spec-table tr:hover td { background:var(--blue-light); }
+    .mach-header { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+    .mach-header-icon { width:48px; height:48px; background:var(--blue-light); border-radius:10px; display:grid; place-items:center; }
+    .mach-header-icon i { color:var(--blue); font-size:1.3rem; }
+    .mach-header h3 { font-family:'Syne',sans-serif; font-size:1.2rem; color:var(--blue); }
+
+    /* ══════════════════════════════════════
+       INSTRUMENTS PAGE
+    ══════════════════════════════════════ */
+    .instr-card { position:relative; overflow:hidden; }
+    .instr-icon { font-size:2.2rem; color:var(--blue); margin-bottom:14px; }
+    .instr-card h3 { font-family:'Syne',sans-serif; font-size:1.05rem; color:var(--blue); margin-bottom:8px; }
+    .instr-card p { font-size:.83rem; color:var(--gray-600); line-height:1.65; }
+    .instr-hover {
+      position:absolute; inset:0; background:var(--blue); padding:24px;
+      display:flex; flex-direction:column; justify-content:center;
+      opacity:0; transition:.3s; border-radius:var(--radius);
+    }
+    .instr-card:hover .instr-hover { opacity:1; }
+    .instr-hover p { color:#fff; font-size:.85rem; line-height:1.6; }
+    .instr-hover h3 { color:var(--orange); margin-bottom:10px; font-family:'Syne',sans-serif; font-size:1.05rem; }
+
+    /* ══════════════════════════════════════
+       CAPACITY PAGE
+    ══════════════════════════════════════ */
+    .capacity-filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:32px; }
+    .filter-btn {
+      padding:6px 16px; border-radius:99px; font-size:.82rem; font-weight:600;
+      cursor:pointer; border:1.5px solid var(--gray-200); background:#fff; color:var(--gray-600); transition:.2s;
+    }
+    .filter-btn.active { background:var(--orange); color:#fff; border-color:var(--orange); }
+    .cap-card { border-left:3px solid var(--orange); }
+    .cap-card h3 { font-family:'Syne',sans-serif; font-size:1rem; color:var(--blue); margin-bottom:6px; }
+    .cap-card p { font-size:.83rem; color:var(--gray-600); }
+    .cap-card .badge { margin-bottom:12px; }
+
+    /* ══════════════════════════════════════
+       CLIENTS PAGE
+    ══════════════════════════════════════ */
+    .clients-full-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+    .client-full-card {
+      background:var(--gray-50); border:1px solid var(--gray-200); border-radius:var(--radius);
+      padding:36px 24px; display:flex; flex-direction:column; align-items:center; gap:14px;
+      text-align:center; transition:.25s;
+    }
+    .client-full-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-4px); border-color:var(--blue); background:#fff; }
+    .client-full-card .c-icon { width:60px; height:60px; background:var(--blue-light); border-radius:50%; display:grid; place-items:center; }
+    .client-full-card .c-icon i { color:var(--blue); font-size:1.5rem; }
+    .client-full-card h3 { font-family:'Syne',sans-serif; font-size:.95rem; color:var(--blue); font-weight:700; }
+    .client-full-card p { font-size:.8rem; color:var(--gray-600); }
+
+    /* ══════════════════════════════════════
+       TEAM PAGE
+    ══════════════════════════════════════ */
+    .team-stat { text-align:center; }
+    .team-stat-num { font-family:'Syne',sans-serif; font-size:2.8rem; font-weight:800; color:var(--blue); }
+    .team-stat-num span { color:var(--orange); font-size:1.4rem; }
+    .team-stat-label { font-size:.9rem; color:var(--gray-600); margin-top:4px; font-weight:500; }
+    .team-stat-icon { font-size:1.8rem; color:var(--orange); margin-bottom:12px; }
+    .ops-card { background: linear-gradient(135deg, var(--blue), #1d4ed8); border-radius:var(--radius); padding:32px; color:#fff; }
+    .ops-card h3 { font-family:'Syne',sans-serif; font-size:1.3rem; margin-bottom:16px; }
+    .ops-item { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.1); }
+    .ops-item:last-child { border-bottom:none; }
+    .ops-item i { color:var(--orange); font-size:1rem; width:20px; }
+    .ops-item p { font-size:.9rem; color:rgba(255,255,255,.85); }
+    .design-card { background:var(--orange); border-radius:var(--radius); padding:32px; color:#fff; }
+    .design-card h3 { font-family:'Syne',sans-serif; font-size:1.3rem; margin-bottom:16px; }
+    .design-item { display:flex; align-items:center; gap:12px; padding:8px 0; }
+    .design-item i { font-size:.9rem; color:rgba(255,255,255,.8); }
+    .design-item p { font-size:.9rem; color:rgba(255,255,255,.9); }
+
+    /* ══════════════════════════════════════
+       CONTACT PAGE
+    ══════════════════════════════════════ */
+    .contact-grid { display:grid; grid-template-columns:1fr; gap:48px; align-items:start; max-width:680px; }
+    .contact-info h3 { font-family:'Syne',sans-serif; font-size:1.5rem; color:var(--blue); margin-bottom:24px; }
+    .contact-item { display:flex; align-items:flex-start; gap:16px; margin-bottom:22px; }
+    .contact-icon { width:44px; height:44px; background:var(--blue-light); border-radius:10px; display:grid; place-items:center; flex-shrink:0; }
+    .contact-icon i { color:var(--blue); font-size:1.1rem; }
+    .contact-item p { font-size:.9rem; color:var(--gray-600); line-height:1.65; }
+    .contact-item strong { display:block; font-size:.88rem; font-weight:700; color:var(--blue); margin-bottom:3px; }
+    .form-card { background:#fff; border:1px solid var(--gray-200); border-radius:16px; padding:36px; box-shadow:var(--shadow-md); }
+    .form-card h3 { font-family:'Syne',sans-serif; font-size:1.3rem; color:var(--blue); margin-bottom:24px; }
+    .form-group { margin-bottom:18px; }
+    .form-group label { display:block; font-size:.82rem; font-weight:600; color:var(--gray-800); margin-bottom:6px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width:100%; padding:10px 14px; border:1.5px solid var(--gray-200); border-radius:8px;
+      font-size:.9rem; font-family:'DM Sans',sans-serif; color:var(--gray-800);
+      transition:.2s; background:#fff; outline:none;
+    }
+    .form-group input:focus, .form-group textarea:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(30,58,138,.08); }
+    .form-group textarea { height:110px; resize:vertical; }
+    .file-upload {
+      border:2px dashed var(--gray-200); border-radius:8px; padding:24px;
+      text-align:center; cursor:pointer; transition:.2s;
+    }
+    .file-upload:hover { border-color:var(--blue); background:var(--blue-light); }
+    .file-upload i { font-size:1.5rem; color:var(--gray-400); margin-bottom:8px; }
+    .file-upload p { font-size:.82rem; color:var(--gray-600); }
+    .file-upload input { display:none; }
+    .map-container { margin-top:48px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--gray-200); }
+    .map-container iframe { width:100%; height:350px; border:none; display:block; }
+
+    /* ══════════════════════════════════════
+       WHATSAPP FLOAT
+    ══════════════════════════════════════ */
+    .wa-float {
+      position:fixed; bottom:28px; right:28px; z-index:999;
+      width:56px; height:56px; background:#25D366; border-radius:50%;
+      display:grid; place-items:center; box-shadow:0 4px 20px rgba(37,211,102,.4);
+      text-decoration:none; transition:.25s;
+      animation: pulse-wa 2.5s infinite;
+    }
+    .wa-float:hover { transform:scale(1.1); }
+    .wa-float i { color:#fff; font-size:1.6rem; }
+    @keyframes pulse-wa {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,.4); }
+      50% { box-shadow: 0 4px 30px rgba(37,211,102,.7); }
+    }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    footer { background:#0f1f5c; padding:48px 5% 24px; }
+    .footer-top { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
+    .footer-brand p { font-size:.85rem; color:rgba(255,255,255,.6); line-height:1.7; margin-top:12px; }
+    .footer-col h4 { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; color:#fff; margin-bottom:14px; }
+    .footer-col a { display:block; font-size:.85rem; color:rgba(255,255,255,.6); margin-bottom:8px; cursor:pointer; text-decoration:none; transition:.2s; }
+    .footer-col a:hover { color:var(--orange); }
+    .footer-divider { border:none; border-top:1px solid rgba(255,255,255,.1); margin-bottom:24px; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+    .footer-bottom p { font-size:.8rem; color:rgba(255,255,255,.45); }
+    .footer-bottom .cert { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,.07); padding:5px 12px; border-radius:99px; }
+    .footer-bottom .cert i { color:var(--orange); font-size:.85rem; }
+    .footer-bottom .cert p { color:rgba(255,255,255,.7); font-size:.78rem; }
+    .footer-logo-icon { width:40px; height:40px; background:var(--orange); border-radius:8px; display:grid; place-items:center; }
+    .footer-logo-icon i { color:#fff; font-size:18px; }
+    .footer-brand-row { display:flex; align-items:center; gap:10px; margin-bottom:4px; }
+    .footer-brand-name { font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#fff; }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns:1fr; }
+      .hero-visual { display:none; }
+      .grid-3 { grid-template-columns:repeat(2,1fr); }
+      .grid-4 { grid-template-columns:repeat(2,1fr); }
+      .clients-grid { grid-template-columns:repeat(3,1fr); }
+      .clients-full-grid { grid-template-columns:repeat(2,1fr); }
+      .footer-top { grid-template-columns:1fr 1fr; }
+      .contact-grid { grid-template-columns:1fr; }
+      h2 { font-size:1.8rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display:none; }
+      .hamburger { display:flex; }
+      .highlights-inner { grid-template-columns:1fr; }
+      .grid-3 { grid-template-columns:1fr; }
+      .grid-4 { grid-template-columns:1fr 1fr; }
+      .grid-2 { grid-template-columns:1fr; }
+      .clients-grid { grid-template-columns:repeat(2,1fr); }
+      .clients-full-grid { grid-template-columns:1fr 1fr; }
+      .about-intro { grid-template-columns:1fr; }
+      .footer-top { grid-template-columns:1fr; }
+      .footer-bottom { flex-direction:column; text-align:center; }
+      .hero h1 { font-size:2.2rem; }
+      section { padding: 56px 5%; }
+    }
+    @media (max-width: 480px) {
+      .grid-4 { grid-template-columns:1fr; }
+      .clients-grid { grid-template-columns:1fr 1fr; }
+      .clients-full-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════ NAVBAR ══════ -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="nav-logo-icon"><i class="fas fa-cog"></i></div>
+    <div>
+      <div class="nav-brand">Tathastu <span>Enterprises</span></div>
+      <div style="font-size:.62rem;color:var(--orange);font-weight:600;letter-spacing:.04em;">ISO 9001:2015 CERTIFIED</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a onclick="showPage('home')" class="active" id="nav-home">Home</a>
+    <a onclick="showPage('about')" id="nav-about">About</a>
+    <a onclick="showPage('services')" id="nav-services">Services</a>
+    <a onclick="showPage('machinery')" id="nav-machinery">Machinery</a>
+    <a onclick="showPage('instruments')" id="nav-instruments">Instruments</a>
+    <a onclick="showPage('capacity')" id="nav-capacity">Capacity</a>
+    <a onclick="showPage('clients')" id="nav-clients">Clients</a>
+    <a onclick="showPage('team')" id="nav-team">Team</a>
+    <a onclick="showPage('contact')" id="nav-contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger-btn" onclick="toggleMenu(event)" aria-label="Menu" type="button">
+    <i class="fas fa-bars"></i>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a onclick="showPage('home');closeMenu()">Home</a>
+  <a onclick="showPage('about');closeMenu()">About</a>
+  <a onclick="showPage('services');closeMenu()">Services</a>
+  <a onclick="showPage('machinery');closeMenu()">Machinery</a>
+  <a onclick="showPage('instruments');closeMenu()">Instruments</a>
+  <a onclick="showPage('capacity');closeMenu()">Manufacturing Capacity</a>
+  <a onclick="showPage('clients');closeMenu()">Clients</a>
+  <a onclick="showPage('team');closeMenu()">Team & Operations</a>
+  <a onclick="showPage('contact');closeMenu()">Contact</a>
+</div>
+
+<!-- ══════ HOME PAGE ══════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag"><i class="fas fa-certificate"></i>ISO 9001:2015 Certified</div>
+        <h1>Precision Engineering &<br/><span>Machining Solutions</span></h1>
+        <p class="hero-sub">CNC, VMC & Fabrication Experts serving India's leading tyre manufacturers with world-class precision and reliability.</p>
+        <div class="hero-btns">
+          <a class="btn btn-outline-white" onclick="showPage('machinery')"><i class="fas fa-industry"></i>View Machinery</a>
+        </div>
+        <div style="display:flex;gap:28px;margin-top:36px;flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:#fff;">15+</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.6);">Years Experience</div>
+          </div>
+          <div style="width:1px;background:rgba(255,255,255,.15);"></div>
+          <div style="text-align:center;">
+            <div style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:#fff;">8+</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.6);">Major Clients</div>
+          </div>
+          <div style="width:1px;background:rgba(255,255,255,.15);"></div>
+          <div style="text-align:center;">
+            <div style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--orange);">24hr</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.6);">Operations</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-icon-grid">
+          <div class="hero-icon-item"><i class="fas fa-cogs"></i><p>VMC Machines</p></div>
+          <div class="hero-icon-item"><i class="fas fa-drafting-compass"></i><p>CNC Lathes</p></div>
+          <div class="hero-icon-item"><i class="fas fa-tools"></i><p>Fabrication</p></div>
+          <div class="hero-icon-item"><i class="fas fa-cut"></i><p>Drilling & Cutting</p></div>
+          <div class="hero-icon-item"><i class="fas fa-fire"></i><p>Welding</p></div>
+          <div class="hero-icon-item"><i class="fas fa-ruler-combined"></i><p>Precision Milling</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <div class="highlights">
+    <div class="highlights-inner">
+      <div class="hl-card">
+        <div class="hl-icon blue"><i class="fas fa-certificate"></i></div>
+        <div>
+          <div class="hl-title">ISO 9001:2015 Certified</div>
+          <div class="hl-desc">Internationally certified quality management system ensuring consistent, world-class precision in every product.</div>
+        </div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-icon orange"><i class="fas fa-microchip"></i></div>
+        <div>
+          <div class="hl-title">Advanced CNC & VMC Machines</div>
+          <div class="hl-desc">State-of-the-art VMC (H710×W710×L1500) and heavy-duty CNC lathes (OD800×L1000) for ultra-precise work.</div>
+        </div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-icon blue"><i class="fas fa-handshake"></i></div>
+        <div>
+          <div class="hl-title">Trusted by Tyre Giants</div>
+          <div class="hl-desc">Preferred partner of Yokohama, CEAT, Trelleborg, Assenso and other leading tyre manufacturers across India.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="section-head center">
+      <div class="section-label"><i class="fas fa-wrench"></i>Our Services</div>
+      <h2>What We <span>Deliver</span></h2>
+      <p class="section-sub">From precision machining to complex fabrication, we provide end-to-end manufacturing solutions for industrial applications.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-cog"></i></div>
+        <h3>Precision Machining</h3>
+        <p>High-accuracy machining of complex parts with tight tolerances. Suitable for tyre building drums, rings, and flanges.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-drafting-compass"></i></div>
+        <h3>CNC Turning</h3>
+        <p>Heavy-duty CNC turning up to OD 800×L1000 with precise dimensional accuracy for all industrial components.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-hammer"></i></div>
+        <h3>Fabrication</h3>
+        <p>Complete fabrication works including structural assemblies, weld fixtures, and custom industrial equipment builds.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-cut"></i></div>
+        <h3>Drilling & Cutting</h3>
+        <p>Hand drilling, radial drilling (GSP Make), cut-off saw (350mm), and semi-automatic profile cutting solutions.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-fire-alt"></i></div>
+        <h3>Welding</h3>
+        <p>Professional ARC welding with 2 dedicated arc welders using ARC-400 machines for robust, quality joints.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Milling</h3>
+        <p>Surface and profile milling using Alcera Make milling machines for precise material removal and finishing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MACHINERY PREVIEW -->
+  <section class="machinery-preview">
+    <div class="section-head">
+      <div class="section-label"><i class="fas fa-industry"></i>Machinery</div>
+      <h2>Our <span>Equipment</span></h2>
+      <p class="section-sub">Equipped with modern CNC, VMC and lathe machinery to handle diverse industrial requirements at scale.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card mach-card">
+        <div class="mach-icon"><i class="fas fa-microchip"></i></div>
+        <h3>VMC Machine</h3>
+        <ul class="mach-spec">
+          <li>Travel: H 710 × W 710 × L 1500</li>
+          <li>High-precision vertical machining</li>
+          <li>AutoCAD & Mastercam programmed</li>
+        </ul>
+      </div>
+      <div class="card mach-card">
+        <div class="mach-icon"><i class="fas fa-drafting-compass"></i></div>
+        <h3>CNC Heavy Duty Lathes</h3>
+        <ul class="mach-spec">
+          <li>OD 800 × L 1000</li>
+          <li>Heavy-duty capacity</li>
+          <li>Precision turning & boring</li>
+        </ul>
+      </div>
+      <div class="card mach-card">
+        <div class="mach-icon"><i class="fas fa-cogs"></i></div>
+        <h3>Lathe Machines</h3>
+        <ul class="mach-spec">
+          <li>OD 1200–1500 × L 2500–3000</li>
+          <li>Multiple capacity options</li>
+          <li>High torque operation</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a class="btn btn-primary" onclick="showPage('machinery')"><i class="fas fa-arrow-right"></i>View All Machinery & Specs</a>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="clients">
+    <div class="section-head center">
+      <div class="section-label"><i class="fas fa-building"></i>Our Clients</div>
+      <h2>Trusted by <span>Industry Leaders</span></h2>
+    </div>
+    <div class="clients-grid">
+      <div class="client-logo"><i class="fas fa-circle-dot"></i><p>Yokohama Tyres<br/><small style="font-weight:400;color:var(--gray-400);">Dahej • Tamil Nadu • Vizag</small></p></div>
+      <div class="client-logo"><i class="fas fa-circle-dot"></i><p>CEAT Ltd.<br/><small style="font-weight:400;color:var(--gray-400);">Ambernath • Bhandup</small></p></div>
+      <div class="client-logo"><i class="fas fa-circle-dot"></i><p>Assenso Tyres<br/><small style="font-weight:400;color:var(--gray-400);">Panoli Plant</small></p></div>
+      <div class="client-logo"><i class="fas fa-circle-dot"></i><p>SYAM Trelleborg<br/><small style="font-weight:400;color:var(--gray-400);">Bharuch, Gujarat</small></p></div>
+      <div class="client-logo"><i class="fas fa-circle-dot"></i><p>Lechlar India<br/><small style="font-weight:400;color:var(--gray-400);">Private Ltd.</small></p></div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <h2>Need Custom Machining Solutions?</h2>
+    <p>Share your drawings and requirements. We'll respond within 24 hours.</p>
+    <a class="btn btn-orange" onclick="showPage('contact')"><i class="fas fa-envelope"></i>Contact Us</a>
+  </div>
+</div>
+
+<!-- ══════ ABOUT PAGE ══════ -->
+<div id="page-about" class="page">
+  <section>
+    <div class="about-intro">
+      <div>
+        <div class="section-label"><i class="fas fa-info-circle"></i>About Us</div>
+        <h2>Manufacturer of <span>Machine Parts & Tooling</span></h2>
+        <p class="section-sub" style="margin-bottom:20px;">Tathastu Enterprises is a specialized manufacturer of machine parts and tooling used in tyre manufacturing industries. Based in Thane West, Maharashtra, we serve some of India's largest tyre producers with precision-engineered components.</p>
+        <p style="font-size:.9rem;color:var(--gray-600);line-height:1.75;margin-bottom:24px;">We specialize in manufacturing Tyre Building Drums, Clamping Rings, BPR, Bead Rings, PCI Rings, Solid Rims, and Mould Spacers. In addition, we perform all types of fabricated works and precision machining to meet the demanding requirements of tyre manufacturers.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn btn-primary" onclick="showPage('contact')"><i class="fas fa-envelope"></i>Get in Touch</a>
+          <a class="btn btn-outline" onclick="showPage('services')"><i class="fas fa-eye"></i>Our Services</a>
+        </div>
+      </div>
+      <div class="about-intro-right">
+        <div class="stat-card"><div class="stat-num">15+</div><div class="stat-label">Years of Experience</div></div>
+        <div class="stat-card orange"><div class="stat-num">8+</div><div class="stat-label">Major Clients</div></div>
+        <div class="stat-card orange"><div class="stat-num">12hr</div><div class="stat-label">Daily Operations (2 Shifts)</div></div>
+        <div class="stat-card"><div class="stat-num">ISO</div><div class="stat-label">9001:2015 Certified</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mvs" style="padding:72px 5%;">
+    <div class="section-head center">
+      <div class="section-label"><i class="fas fa-star"></i>Our Values</div>
+      <h2>Mission, Vision & <span>Strengths</span></h2>
+    </div>
+    <div class="grid-3">
+      <div class="card mv-card">
+        <h3><i class="fas fa-bullseye"></i>Our Mission</h3>
+        <p>To deliver precision-engineered machine parts and tooling that empower India's tyre manufacturing industry — with consistency, accuracy, and on-time delivery every time.</p>
+      </div>
+      <div class="card mv-card">
+        <h3><i class="fas fa-eye"></i>Our Vision</h3>
+        <p>To be the most trusted precision machining partner for tyre manufacturers across Asia, known for innovation, reliability, and zero-defect manufacturing.</p>
+      </div>
+      <div class="card mv-card">
+        <h3><i class="fas fa-shield-alt"></i>Our Strengths</h3>
+        <p>Advanced CNC/VMC machinery, ISO-certified processes, 3-person design team using AutoCAD, SolidWorks & Mastercam, and 15+ years of domain expertise.</p>
+      </div>
+    </div>
+    <div class="grid-3" style="margin-top:20px;">
+      <div class="card mv-card">
+        <h3><i class="fas fa-drafting-compass"></i>Design Capability</h3>
+        <p>In-house design team of 3 professionals using industry-standard CAD/CAM tools: AutoCAD, SolidWorks, and Mastercam for complex component design and machining programs.</p>
+      </div>
+      <div class="card mv-card">
+        <h3><i class="fas fa-check-double"></i>Quality Assurance</h3>
+        <p>Comprehensive measuring instruments from Vernier Calipers and Micrometers to Slip Gauges and Height Gauges ensure every component meets tight tolerance requirements.</p>
+      </div>
+      <div class="card mv-card">
+        <h3><i class="fas fa-users-cog"></i>Skilled Workforce</h3>
+        <p>8 skilled technicians (Lathe, Milling, VMC & EDM operators), 2 arc welders, 4 helpers, 1 VMC programmer — operating in two 12-hour shifts for maximum capacity.</p>
+      </div>
+    </div>
+  </section>
+
+  <div style="background:var(--blue);padding:36px 5%;text-align:center;">
+    <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:4px;">GST Registration Number</p>
+    <p style="font-family:'Syne',sans-serif;font-size:1.4rem;color:#fff;letter-spacing:.08em;">27AXSPY9549H1Z8</p>
+  </div>
+</div>
+
+<!-- ══════ SERVICES PAGE ══════ -->
+<div id="page-services" class="page">
+  <section>
+    <div class="section-head center">
+      <div class="section-label"><i class="fas fa-wrench"></i>Services</div>
+      <h2>Comprehensive <span>Manufacturing Services</span></h2>
+      <p class="section-sub">We provide a full spectrum of precision engineering and manufacturing services tailored for the tyre industry and beyond.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-cog"></i></div>
+        <h3>Precision Machining</h3>
+        <p>High-accuracy machining of complex industrial parts with tight tolerances. Specializing in tyre building drums, clamping rings, BPR, bead rings, PCI rings and solid rims using advanced VMC and CNC equipment.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-drafting-compass"></i></div>
+        <h3>CNC Turning</h3>
+        <p>Heavy-duty CNC turning operations with OD up to 800mm and length 1000mm. Capable of handling large-diameter workpieces with precise dimensional accuracy for all industrial component requirements.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-hammer"></i></div>
+        <h3>Fabrication Works</h3>
+        <p>Complete fabrication including structural assemblies, weld fixtures, jigs and custom industrial equipment. From raw material to finished fabricated assembly, we handle the entire process.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-cut"></i></div>
+        <h3>Drilling & Cutting</h3>
+        <p>Hand drilling machines (4 Nos., 4", 5", 7"), cut-off saw (350mm), radial drilling machine (GSP Make), hand profile cutter, and semi-automatic Pog cutting for complete cutting solutions.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-fire-alt"></i></div>
+        <h3>Welding Services</h3>
+        <p>Professional ARC welding services with 2 dedicated arc welders operating ARC-400 machines. Providing robust, quality weld joints for structural, pressure, and precision weld requirements.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Milling Operations</h3>
+        <p>Surface and profile milling using Alcera Make milling machines. Capable of flat surface generation, slot milling, contouring and step milling for complex component geometries.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-circle-notch"></i></div>
+        <h3>Tyre Building Drum Manufacturing</h3>
+        <p>Specialized manufacturing of tyre building drums — the core equipment component used in tyre manufacturing. Precision-engineered to exact customer drawings and standards.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-pencil-ruler"></i></div>
+        <h3>Design & Development</h3>
+        <p>In-house design capability using AutoCAD, SolidWorks and Mastercam. Our 3-member design team can develop components from concept drawings to production-ready machining programs.</p>
+      </div>
+      <div class="card svc-card">
+        <div class="svc-icon"><i class="fas fa-search-plus"></i></div>
+        <h3>Quality Inspection</h3>
+        <p>Comprehensive inspection using Vernier calipers, micrometers, dial gauges, height gauges and slip gauges. Every part is measured and verified to meet customer-specified tolerances.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════ MACHINERY PAGE ══════ -->
+<div id="page-machinery" class="page">
+  <section>
+    <div class="section-head">
+      <div class="section-label"><i class="fas fa-industry"></i>Machinery</div>
+      <h2>Our <span>Machinery & Specifications</span></h2>
+      <p class="section-sub">State-of-the-art equipment capable of handling diverse precision machining requirements for industrial manufacturing.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab(this,'tab-vmc')">VMC Machine</button>
+      <button class="tab-btn" onclick="showTab(this,'tab-cnc')">CNC Lathes</button>
+      <button class="tab-btn" onclick="showTab(this,'tab-lathe')">Lathe Machines</button>
+      <button class="tab-btn" onclick="showTab(this,'tab-drill')">Drilling & Cutting</button>
+      <button class="tab-btn" onclick="showTab(this,'tab-weld')">Welding Equipment</button>
+      <button class="tab-btn" onclick="showTab(this,'tab-mill')">Milling</button>
+    </div>
+
+    <div id="tab-vmc" class="tab-pane active">
+      <div class="card" style="max-width:800px;">
+        <div class="mach-header">
+          <div class="mach-header-icon"><i class="fas fa-microchip"></i></div>
+          <div>
+            <h3>VMC Machine (Vertical Machining Centre)</h3>
+          </div>
+        </div>
+        <table class="spec-table">
+          <thead><tr><th>Parameter</th><th>Specification</th></tr></thead>
+          <tbody>
+            <tr><td>Machine Type</td><td>Vertical Machining Centre (VMC)</td></tr>
+            <tr><td>Travel (H × W × L)</td><td>710 mm × 710 mm × 1500 mm</td></tr>
+            <tr><td>Operation</td><td>CNC Controlled (Fanuc / Siemens)</td></tr>
+            <tr><td>Programming Software</td><td>Mastercam, AutoCAD, SolidWorks</td></tr>
+            <tr><td>Programmer</td><td>1 Dedicated VMC Programmer</td></tr>
+            <tr><td>Suitable For</td><td>Complex 3D machining, mould cavities, precision tooling</td></tr>
+            <tr><td>Operation</td><td>2 Shifts (12 Hours/Day)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-cnc" class="tab-pane">
+      <div class="card" style="max-width:800px;">
+        <div class="mach-header">
+          <div class="mach-header-icon"><i class="fas fa-drafting-compass"></i></div>
+          <div>
+            <h3>Heavy Duty CNC Lathes</h3>
+          </div>
+        </div>
+        <table class="spec-table">
+          <thead><tr><th>Parameter</th><th>Specification</th></tr></thead>
+          <tbody>
+            <tr><td>Machine Type</td><td>Heavy Duty CNC Lathe</td></tr>
+            <tr><td>Swing Over Bed (OD)</td><td>800 mm</td></tr>
+            <tr><td>Max. Turning Length (L)</td><td>1000 mm</td></tr>
+            <tr><td>Control System</td><td>CNC (Fanuc)</td></tr>
+            <tr><td>Operations</td><td>Turning, Boring, Threading, Facing, Grooving</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-lathe" class="tab-pane">
+      <div class="card" style="max-width:900px;">
+        <div class="mach-header">
+          <div class="mach-header-icon"><i class="fas fa-cogs"></i></div>
+          <div>
+            <h3>Lathe Machines</h3>
+          </div>
+        </div>
+        <table class="spec-table">
+          <thead><tr><th>#</th><th>OD Capacity</th><th>Length Capacity</th><th>Machine Type</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>OD 1200 mm</td><td>L 2500 mm</td><td>Heavy Duty Lathe</td></tr>
+            <tr><td>2</td><td>OD 1300 mm</td><td>L 2500 mm</td><td>Heavy Duty Lathe</td></tr>
+            <tr><td>3</td><td>OD 1400 mm</td><td>L 3000 mm</td><td>Heavy Duty Lathe</td></tr>
+            <tr><td>4</td><td>OD 1500 mm</td><td>L 3000 mm</td><td>Heavy Duty Lathe</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:16px;font-size:.82rem;color:var(--gray-600);">All lathes operated by skilled technicians with expertise in Lathe, Milling, VMC & EDM operations.</p>
+      </div>
+    </div>
+
+    <div id="tab-drill" class="tab-pane">
+      <div class="card" style="max-width:800px;">
+        <div class="mach-header">
+          <div class="mach-header-icon"><i class="fas fa-cut"></i></div>
+          <div><h3>Drilling & Cutting Equipment</h3></div>
+        </div>
+        <table class="spec-table">
+          <thead><tr><th>Equipment</th><th>Specification</th></tr></thead>
+          <tbody>
+            <tr><td>Hand Drilling Machines</td><td>4", 5", 7" Capacity</td></tr>
+            <tr><td>Cut-Off Saw</td><td>350 mm Blade</td></tr>
+            <tr><td>Drilling Machine</td><td>Pillar Type</td></tr>
+            <tr><td>Radial Drill Machine</td><td>GSP Make</td></tr>
+            <tr><td>Hand Profile Cutter</td><td>Standard</td></tr>
+            <tr><td>Semi-Auto Pog Cutting</td><td>Profile Cutting</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-weld" class="tab-pane">
+      <div class="card" style="max-width:700px;">
+        <div class="mach-header">
+          <div class="mach-header-icon"><i class="fas fa-fire-alt"></i></div>
+          <div>
+            <h3>Welding Equipment</h3>
+          </div>
+        </div>
+        <table class="spec-table">
+          <thead><tr><th>Equipment</th><th>Specification</th></tr></thead>
+          <tbody>
+            <tr><td>ARC Welding Machine</td><td>ARC-400 Model</td></tr>
+            <tr><td>Welding Operators</td><td>Skilled Arc Welders</td></tr>
+            <tr><td>Welding Type</td><td>ARC / Shielded Metal Arc Welding (SMAW)</td></tr>
+            <tr><td>Applications</td><td>Structural, Fabrication, Pressure Joints</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="tab-mill" class="tab-pane">
+      <div class="card" style="max-width:700px;">
+        <div class="mach-header">
+          <div class="mach-header-icon"><i class="fas fa-layer-group"></i></div>
+          <div><h3>Milling Machines</h3></div>
+        </div>
+        <table class="spec-table">
+          <thead><tr><th>Equipment</th><th>Specification</th></tr></thead>
+          <tbody>
+            <tr><td>Milling Machine</td><td>Alcera Make</td></tr>
+            <tr><td>Operations</td><td>Face milling, slot milling, step milling, contouring</td></tr>
+            <tr><td>Materials</td><td>MS, SS, Alloy Steel, Cast Iron, Aluminium</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<!-- ══════ INSTRUMENTS PAGE ══════ -->
+<div id="page-instruments" class="page">
+  <section>
+    <div class="section-head center">
+      <div class="section-label"><i class="fas fa-ruler"></i>Quality Control</div>
+      <h2>Measuring <span>Instruments</span></h2>
+      <p class="section-sub">Comprehensive metrology instruments for precise dimensional verification of every component we manufacture.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card instr-card" style="min-height:200px;">
+        <div class="instr-icon"><i class="fas fa-ruler-horizontal"></i></div>
+        <h3>Vernier Caliper</h3>
+        <p>Precision measurement of OD, ID, depth and step dimensions. Available in various ranges and angle measurements.</p>
+        <div class="instr-hover">
+          <h3>Vernier Caliper</h3>
+          <p>• Range: Various Ranges available<br/>• 0–150 mm Dial Vernier Caliper<br/>• 0–480 mm Depth Vernier Caliper<br/>• Angle Range models available<br/>• Used for: OD, ID, depth, step measurement</p>
+        </div>
+      </div>
+      <div class="card instr-card" style="min-height:200px;">
+        <div class="instr-icon"><i class="fas fa-circle-notch"></i></div>
+        <h3>Micrometer</h3>
+        <p>High-precision measurement for external diameter, internal bore, and depth. Multiple range variants.</p>
+        <div class="instr-hover">
+          <h3>Micrometer</h3>
+          <p>• 10 to 350 mm Inside Micrometer<br/>• 10 to 358 mm Bore Dial Gauge<br/>• 50 to 350 mm Inside Micrometer<br/>• To 100 mm Depth Micrometer<br/>• To 300 mm Micrometer</p>
+        </div>
+      </div>
+      <div class="card instr-card" style="min-height:200px;">
+        <div class="instr-icon"><i class="fas fa-tachometer-alt"></i></div>
+        <h3>Dial Gauge</h3>
+        <p>Used for measuring run-out, deflection and surface variations with high repeatability and accuracy.</p>
+        <div class="instr-hover">
+          <h3>Dial Gauge</h3>
+          <p>• 10 to 350 mm Done Dial Gauge<br/>• 10 to 358 mm Inside Micrometer<br/>• Depth Gauge (standard)<br/>• Bore Dial Gauge (10 to 358 mm)<br/>• Used for: run-out, TIR, flatness</p>
+        </div>
+      </div>
+      <div class="card instr-card" style="min-height:200px;">
+        <div class="instr-icon"><i class="fas fa-arrows-alt-v"></i></div>
+        <h3>Height Gauge</h3>
+        <p>Precision height and step measurement tool used for surface plate inspection and comparative gauging.</p>
+        <div class="instr-hover">
+          <h3>Height Gauge</h3>
+          <p>• Standard Height Gauge<br/>• Used on surface plates<br/>• Scribing and measurement capability<br/>• High accuracy vertical measurement<br/>• Suitable for: layout, inspection</p>
+        </div>
+      </div>
+      <div class="card instr-card" style="min-height:200px;">
+        <div class="instr-icon"><i class="fas fa-grip-horizontal"></i></div>
+        <h3>Slip Gauge</h3>
+        <p>Master precision gauges used for calibration and setting instruments to known reference standards.</p>
+        <div class="instr-hover">
+          <h3>Slip Gauge</h3>
+          <p>• Slip Gauge Box – MASTER Grade<br/>• Slip Gauge BGX – MASTER Grade<br/>• Used for: calibration, setting, comparison<br/>• Highest accuracy reference standards<br/>• Traceable to national standards</p>
+        </div>
+      </div>
+      <div class="card instr-card" style="min-height:200px;">
+        <div class="instr-icon"><i class="fas fa-drafting-compass"></i></div>
+        <h3>Angle Protractor & Thread Gauges</h3>
+        <p>Used for angular measurement and thread verification ensuring correct thread forms and pitch.</p>
+        <div class="instr-hover">
+          <h3>Angle & Thread Gauges</h3>
+          <p>• Angle Protractor (standard range)<br/>• Thread Plug Gauge (various pitches)<br/>• Used for: angular verification, thread checking<br/>• Ensures compliance with drawing callouts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════ CAPACITY PAGE ══════ -->
+<div id="page-capacity" class="page">
+  <section>
+    <div class="section-head">
+      <div class="section-label"><i class="fas fa-boxes"></i>Manufacturing Capacity</div>
+      <h2>What We <span>Manufacture</span></h2>
+      <p class="section-sub">Specialised in tyre industry components with full manufacturing capability from raw material to finished part.</p>
+    </div>
+    <div class="capacity-filters">
+      <button class="filter-btn active" onclick="filterCap(this,'all')">All Products</button>
+      <button class="filter-btn" onclick="filterCap(this,'rings')">Rings & Drums</button>
+      <button class="filter-btn" onclick="filterCap(this,'rims')">Rims & Spacers</button>
+      <button class="filter-btn" onclick="filterCap(this,'machining')">Machining Jobs</button>
+    </div>
+    <div class="grid-3" id="cap-grid">
+      <div class="card cap-card" data-cat="rings">
+        <span class="badge badge-orange">Rings & Drums</span>
+        <h3>Clamping Ring</h3>
+        <p>Precision machined clamping rings for tyre building machines. Manufactured to exact customer drawings and tolerances.</p>
+      </div>
+      <div class="card cap-card" data-cat="rings">
+        <span class="badge badge-orange">Rings & Drums</span>
+        <h3>BPR (Bead Pressure Ring)</h3>
+        <p>Bead pressure rings for tyre building drums — manufactured with high precision for reliable tyre building operations.</p>
+      </div>
+      <div class="card cap-card" data-cat="rings">
+        <span class="badge badge-orange">Rings & Drums</span>
+        <h3>Bead Ring</h3>
+        <p>Bead rings used in tyre building equipment. Precision turned and finished to meet tyre manufacturer specifications.</p>
+      </div>
+      <div class="card cap-card" data-cat="rings">
+        <span class="badge badge-orange">Rings & Drums</span>
+        <h3>Bead Flange</h3>
+        <p>Precision bead flanges used in tyre curing moulds and building equipment. Tight-tolerance machining ensured.</p>
+      </div>
+      <div class="card cap-card" data-cat="rings">
+        <span class="badge badge-orange">Rings & Drums</span>
+        <h3>PCI Ring</h3>
+        <p>Post Cure Inflation (PCI) rings used in tyre curing systems. Manufactured for Yokohama, CEAT and other major OEM requirements.</p>
+      </div>
+      <div class="card cap-card" data-cat="rings">
+        <span class="badge badge-blue">Precision Parts</span>
+        <h3>PCI Flange</h3>
+        <p>Precision PCI flanges for tyre curing and inflation systems. CNC turned and verified to precise dimensional standards.</p>
+      </div>
+      <div class="card cap-card" data-cat="rims">
+        <span class="badge badge-blue">Rims & Spacers</span>
+        <h3>Solid Rims</h3>
+        <p>Heavy-duty solid rims for industrial tyre testing and mounting. Manufactured to OEM specifications and load ratings.</p>
+      </div>
+      <div class="card cap-card" data-cat="rims">
+        <span class="badge badge-blue">Rims & Spacers</span>
+        <h3>Mould Spacer</h3>
+        <p>Precision mould spacers for tyre curing presses ensuring correct tyre geometry and uniform wall thickness.</p>
+      </div>
+      <div class="card cap-card" data-cat="rings">
+        <span class="badge badge-orange">Rings & Drums</span>
+        <h3>Tyre Building Drum</h3>
+        <p>Complete tyre building drums — our core specialisation. Precision-manufactured to exact customer drawings with full QC inspection.</p>
+      </div>
+      <div class="card cap-card" data-cat="rings">
+        <span class="badge badge-orange">Rings & Drums</span>
+        <h3>Ply Cuff</h3>
+        <p>Ply cuff components used in tyre building process. CNC machined for dimensional accuracy and surface finish.</p>
+      </div>
+      <div class="card cap-card" data-cat="machining">
+        <span class="badge badge-blue" style="background:#f0fdf4;color:#166534;">Machining Jobs</span>
+        <h3>All Types of Machining Jobs</h3>
+        <p>General precision machining jobs accepted — turning, milling, drilling, boring, and threading operations for industrial components.</p>
+      </div>
+      <div class="card cap-card" data-cat="machining">
+        <span class="badge badge-blue" style="background:#f0fdf4;color:#166534;">Fabrication</span>
+        <h3>All Fabrication Works</h3>
+        <p>Complete fabrication jobs from structural steel to precision assemblies. Welding, cutting, and assembly services included.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════ CLIENTS PAGE ══════ -->
+<div id="page-clients" class="page">
+  <section>
+    <div class="section-head center">
+      <div class="section-label"><i class="fas fa-handshake"></i>Our Clients</div>
+      <h2>Our <span>Major Customers</span></h2>
+      <p class="section-sub">We are the trusted manufacturing partner of India's leading tyre companies across multiple plants and locations.</p>
+    </div>
+    <div class="clients-full-grid">
+      <div class="client-full-card">
+        <div class="c-icon"><i class="fas fa-circle-dot"></i></div>
+        <h3>Yokohama Tyres – Dahej Plant</h3>
+        <p>Major tyre manufacturer, Gujarat</p>
+      </div>
+      <div class="client-full-card">
+        <div class="c-icon"><i class="fas fa-circle-dot"></i></div>
+        <h3>Yokohama Tyres – Tamil Nadu</h3>
+        <p>Major tyre manufacturer, South India</p>
+      </div>
+      <div class="client-full-card">
+        <div class="c-icon"><i class="fas fa-circle-dot"></i></div>
+        <h3>Yokohama Tyres – Vizag Plant</h3>
+        <p>Major tyre manufacturer, Andhra Pradesh</p>
+      </div>
+      <div class="client-full-card">
+        <div class="c-icon"><i class="fas fa-circle-dot"></i></div>
+        <h3>CEAT Speciality – Ambernath</h3>
+        <p>Leading tyre manufacturer, Maharashtra</p>
+      </div>
+      <div class="client-full-card">
+        <div class="c-icon"><i class="fas fa-circle-dot"></i></div>
+        <h3>CEAT Ltd. – Bhandup Plant</h3>
+        <p>Leading tyre manufacturer, Mumbai</p>
+      </div>
+      <div class="client-full-card">
+        <div class="c-icon"><i class="fas fa-circle-dot"></i></div>
+        <h3>Assenso Tyres – Panoli Plant</h3>
+        <p>Tyre manufacturer, Gujarat</p>
+      </div>
+      <div class="client-full-card">
+        <div class="c-icon"><i class="fas fa-circle-dot"></i></div>
+        <h3>SYAM Trelleborg Tires LLP</h3>
+        <p>Bharuch, Gujarat</p>
+      </div>
+      <div class="client-full-card">
+        <div class="c-icon"><i class="fas fa-circle-dot"></i></div>
+        <h3>Lechlar India Pvt. Ltd.</h3>
+        <p>Industrial client, India</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════ TEAM PAGE ══════ -->
+<div id="page-team" class="page">
+  <section>
+    <div class="section-head center">
+      <div class="section-label"><i class="fas fa-users"></i>Our Team</div>
+      <h2>Team & <span>Operations</span></h2>
+      <p class="section-sub">A skilled, dedicated team running 12-hour dual-shift operations to meet demanding production schedules.</p>
+    </div>
+    <div class="grid-4" style="margin-bottom:40px;">
+      <div class="card team-stat">
+        <div class="team-stat-icon"><i class="fas fa-hard-hat"></i></div>
+        <div class="team-stat-num">8 <span>Nos.</span></div>
+        <div class="team-stat-label">Skilled Technicians<br/><small style="font-size:.75rem;color:var(--gray-400);">Lathe, Milling, VMC & EDM</small></div>
+      </div>
+      <div class="card team-stat">
+        <div class="team-stat-icon"><i class="fas fa-fire"></i></div>
+        <div class="team-stat-num">2 <span>Nos.</span></div>
+        <div class="team-stat-label">Arc Welders<br/><small style="font-size:.75rem;color:var(--gray-400);">ARC-400 Machines</small></div>
+      </div>
+      <div class="card team-stat">
+        <div class="team-stat-icon"><i class="fas fa-tools"></i></div>
+        <div class="team-stat-num">4 <span>Nos.</span></div>
+        <div class="team-stat-label">Helpers<br/><small style="font-size:.75rem;color:var(--gray-400);">Support Operations</small></div>
+      </div>
+      <div class="card team-stat">
+        <div class="team-stat-icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="team-stat-num">1 <span>No.</span></div>
+        <div class="team-stat-label">VMC Programmer<br/><small style="font-size:.75rem;color:var(--gray-400);">Mastercam & AutoCAD</small></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="ops-card">
+        <h3><i class="fas fa-clock" style="color:var(--orange);margin-right:10px;"></i>Operations</h3>
+        <div class="ops-item"><i class="fas fa-sun"></i><p>Shift 1: 7:00 AM – 7:00 PM</p></div>
+        <div class="ops-item"><i class="fas fa-moon"></i><p>Shift 2: 7:00 PM – 7:00 AM</p></div>
+        <div class="ops-item"><i class="fas fa-calendar-check"></i><p>Monday to Saturday Operations</p></div>
+        <div class="ops-item"><i class="fas fa-industry"></i><p>12-Hour Continuous Production</p></div>
+        <div class="ops-item"><i class="fas fa-check-circle"></i><p>ISO 9001:2015 Quality Process</p></div>
+      </div>
+      <div class="card" style="grid-column:span 1;">
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.2rem;color:var(--blue);margin-bottom:16px;"><i class="fas fa-users" style="color:var(--orange);margin-right:8px;"></i>Team Breakdown</h3>
+        <table class="spec-table">
+          <thead><tr><th>Role</th><th>Count</th></tr></thead>
+          <tbody>
+            <tr><td>Skilled Technicians (Lathe/Mill/VMC/EDM)</td><td><strong>8 Nos.</strong></td></tr>
+            <tr><td>Arc Welders</td><td><strong>2 Nos.</strong></td></tr>
+            <tr><td>Fitter</td><td><strong>1 No.</strong></td></tr>
+            <tr><td>Helpers</td><td><strong>4 Nos.</strong></td></tr>
+            <tr><td>VMC Programmer</td><td><strong>1 No.</strong></td></tr>
+            <tr><td>Design Team</td><td><strong>3 Nos.</strong></td></tr>
+            <tr><td><strong>Total Team Members</strong></td><td><strong>19 Nos.</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="design-card">
+        <h3><i class="fas fa-pencil-ruler" style="margin-right:10px;"></i>Design & Development</h3>
+        <div class="design-item"><i class="fas fa-users"></i><p>Design Team: 3 Members</p></div>
+        <div class="design-item"><i class="fas fa-drafting-compass"></i><p>AutoCAD (2D & 3D Design)</p></div>
+        <div class="design-item"><i class="fas fa-cube"></i><p>SolidWorks (3D Modelling)</p></div>
+        <div class="design-item"><i class="fas fa-laptop"></i><p>Mastercam (CNC Programming)</p></div>
+        <div class="design-item"><i class="fas fa-file-alt"></i><p>Drawing Interpretation & DFM</p></div>
+        <div class="design-item"><i class="fas fa-check"></i><p>Process Planning & Routing</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════ CONTACT PAGE ══════ -->
+<div id="page-contact" class="page">
+  <section>
+    <div class="section-head">
+      <div class="section-label"><i class="fas fa-envelope"></i>Contact Us</div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <strong>Our Address</strong>
+            <p style="line-height:1.8;">
+              <strong style="color:var(--blue);font-size:.9rem;letter-spacing:.02em;">TATHASTU ENTERPRISES</strong><br/>
+              Satsang Bhavan,<br/>
+              Upvan, Thane – 400606<br/>
+              <small style="color:var(--gray-400);">State: Maharashtra &nbsp;|&nbsp; Code: 27</small><br/>
+              <small style="color:var(--gray-400);">GSTIN: 27AXSPY9549H1Z8</small>
+            </p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <strong>Phone Numbers</strong>
+            <p><a href="tel:9820391077" style="color:var(--blue);text-decoration:none;">+91 98203 91077</a><br/><a href="tel:8692009510" style="color:var(--blue);text-decoration:none;">+91 86920 09510</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <strong>Email Address</strong>
+            <p><a href="/cdn-cgi/l/email-protection#b3c7d2c7dbd2c0c7c6d6ddc7d6c1c3c1dac0d6c0f3d4ded2dadf9dd0dcde" style="color:var(--blue);text-decoration:none;"><span class="__cf_email__" data-cfemail="7c081d08141d0f0809191208190e0c0e150f190f3c1b111d1510521f1311">[email&#160;protected]</span></a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <strong>Working Hours</strong>
+            <p>Monday – Saturday<br/>12-hour operations (2 Shifts)<br/>7:00 AM – 7:00 PM | 7:00 PM – 7:00 AM</p>
+          </div>
+        </div>
+        <a href="https://wa.me/919820391077" target="_blank" class="btn btn-primary" style="margin-top:8px;width:100%;justify-content:center;">
+          <i class="fab fa-whatsapp"></i>Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://maps.google.com/maps?q=Satsang+Bhavan+Upvan+Thane+400606+Maharashtra&output=embed&z=16"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+        title="Tathastu Enterprises – Satsang Bhavan, Upvan, Thane 400606">
+      </iframe>
+    </div>
+  </section>
+</div>
+
+<!-- ══════ FOOTER ══════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-row">
+        <div class="footer-logo-icon"><i class="fas fa-cog"></i></div>
+        <div>
+          <div class="footer-brand-name">Tathastu Enterprises</div>
+          <div style="font-size:.65rem;color:var(--orange);font-weight:600;letter-spacing:.04em;">ISO 9001:2015 CERTIFIED</div>
+        </div>
+      </div>
+      <p>Manufacturer of precision machine parts and tooling for India's leading tyre manufacturing industries. Based in Thane West, Maharashtra.</p>
+      <div style="margin-top:16px;display:flex;gap:10px;">
+        <a href="tel:9820391077" style="background:rgba(255,255,255,.1);color:#fff;padding:7px 12px;border-radius:6px;font-size:.78rem;text-decoration:none;display:flex;align-items:center;gap:6px;"><i class="fas fa-phone"></i>Call Now</a>
+        <a href="https://wa.me/919820391077" target="_blank" style="background:#25D366;color:#fff;padding:7px 12px;border-radius:6px;font-size:.78rem;text-decoration:none;display:flex;align-items:center;gap:6px;"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('about')">About Us</a>
+      <a onclick="showPage('services')">Services</a>
+      <a onclick="showPage('machinery')">Machinery</a>
+      <a onclick="showPage('capacity')">Manufacturing Capacity</a>
+    </div>
+    <div class="footer-col">
+      <h4>More Pages</h4>
+      <a onclick="showPage('instruments')">Measuring Instruments</a>
+      <a onclick="showPage('clients')">Our Clients</a>
+      <a onclick="showPage('team')">Team & Operations</a>
+      <a onclick="showPage('contact')">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a style="cursor:default;">Satsang Bhavan, Upvan</a>
+      <a style="cursor:default;">Thane – 400606, Maharashtra</a>
+      <a style="cursor:default;">State: Maharashtra | Code: 27</a>
+      <a style="cursor:default;">GSTIN: 27AXSPY9549H1Z8</a>
+      <a href="tel:9820391077">+91 98203 91077</a>
+      <a href="tel:8692009510">+91 86920 09510</a>
+      <a href="/cdn-cgi/l/email-protection#512530253930222524343f25342321233822342211363c30383d7f323e3c" style="color:rgba(255,255,255,.6);"><span class="__cf_email__" data-cfemail="82f6e3f6eae3f1f6f7e7ecf6e7f0f2f0ebf1e7f1c2e5efe3ebeeace1edef">[email&#160;protected]</span></a>
+    </div>
+  </div>
+  <hr class="footer-divider"/>
+  <div class="footer-bottom">
+    <p>© 2026 Tathastu Enterprises. All rights reserved. GST: 27AXSPY9549H1Z8</p>
+    <div class="cert">
+      <i class="fas fa-certificate"></i>
+      <p>ISO 9001:2015 Certified</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919820391077" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ── Page routing ──
+  const pages = ['home','about','services','machinery','instruments','capacity','clients','team','contact'];
+  function showPage(id) {
+    pages.forEach(p => {
+      const el = document.getElementById('page-'+p);
+      const nav = document.getElementById('nav-'+p);
+      if (el) el.classList.toggle('active', p === id);
+      if (nav) nav.classList.toggle('active', p === id);
+    });
+    closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── Mobile menu ──
+  var menuOpen = false;
+  function toggleMenu(e) {
+    if (e) { e.stopPropagation(); e.preventDefault(); }
+    menuOpen = !menuOpen;
+    var menu = document.getElementById('mobile-menu');
+    var icon = document.querySelector('#hamburger-btn i');
+    if (menuOpen) {
+      menu.classList.add('open');
+      if (icon) { icon.classList.remove('fa-bars'); icon.classList.add('fa-times'); }
+    } else {
+      menu.classList.remove('open');
+      if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+    }
+  }
+  function closeMenu() {
+    menuOpen = false;
+    document.getElementById('mobile-menu').classList.remove('open');
+    var icon = document.querySelector('#hamburger-btn i');
+    if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+  }
+  document.addEventListener('click', function(e) {
+    var btn = document.getElementById('hamburger-btn');
+    var menu = document.getElementById('mobile-menu');
+    if (menuOpen && btn && menu && !btn.contains(e.target) && !menu.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // ── Tabs ──
+  function showTab(btn, id) {
+    btn.closest('section').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.closest('section').querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  // ── Capacity filter ──
+  function filterCap(btn, cat) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('#cap-grid .cap-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+    });
+  }
+
+  // ── File upload label update ──
+  function updateFileName(input) {
+    const name = input.files[0]?.name || 'No file chosen';
+    document.getElementById('file-name').innerHTML = `<strong>${name}</strong><br/><small>Click to change file</small>`;
+  }
+
+  // ── Form submit ──
+  function submitForm() {
+    const name = document.getElementById('f-name').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    const msg = document.getElementById('form-msg');
+    if (!name || !phone) {
+      msg.style.display = 'block';
+      msg.style.color = '#dc2626';
+      msg.textContent = '⚠ Please fill in your name and phone number.';
+      return;
+    }
+    msg.style.display = 'block';
+    msg.style.color = '#16a34a';
+    msg.textContent = '✓ Thank you! We will get back to you within 24 hours.';
+    document.getElementById('f-name').value = '';
+    document.getElementById('f-company').value = '';
+    document.getElementById('f-phone').value = '';
+    document.getElementById('f-msg').value = '';
+  }
+</script>
+</body>
+</html>
